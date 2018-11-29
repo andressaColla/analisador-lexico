@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="../assets/styles/css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/styles/css/bootstrap/bootstrap.css">
+        <link rel="stylesheet" href="../assets/styles/css/principal/principal.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+        <script type="text/javascript" src="../assets/js/jquery.js"></script>
+        <script type="text/javascript" src="../assets/js/index.js"></script>
+        <script type="text/javascript" src="../assets/js/validator.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
+      <header>
+         <div class="col-12 header">
+            <div class="h2 text-center">Super Analisador Léxico<i class="fas fa-dragon"></i></div>
+         </div>
+         </div>
+    </header>
+    <body>
+        <div class="container col-12" id="main">
+        <main>
+            <form onsubmit="return false;">
+                <div class="row">
+                    <div class="ml-5 card col-5">
+                        <div class="card-header">
+                            <div class="h5 title"><b>Adicione Palavras</b></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <input id="word" type="text" class="form-control" value="" placeholder="Adicione Palavras">
+                            </div>
+                            <div>
+                                <table>
+                                    <tbody id="listWords"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="form-group">
+                                <button id="addWord" class="btn btn-info" title="Adicionar o token" onclick="addWordTocollection();"><i class="glyphicon glyphicon-ok-circle"><i class="fa fa-plus" aria-hidden="true"></i></i>&nbsp; Adicionar</button>
+                                <button id="buttonClear" class="btn btn-danger" onclick="removeWord();"><i class="fa fa-minus" aria-hidden="true"></i>&nbsp; Limpar palavras salvas</button>
+                            </div>
+                        </div>
+                    </div>
+                <div class="card col-6 ml-5">
+                    <div class="card-header">
+                        <div class="h5 title"><b>Digite a palavra para validar</b></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="validate" placeholder="Digite a palavra para validar" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+            <div class="col-10 mt-5 ml-5">
+                <table id="table-automaton"></table>
+            </div>
+            </div>
+            </main>
+            <div id="mascara"></div>
+            </body>
+</html>
